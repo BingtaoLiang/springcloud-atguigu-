@@ -15,6 +15,7 @@ import org.springframework.cloud.client.discovery.DiscoveryClient;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
+import java.util.concurrent.TimeUnit;
 
 /**
  * @description:
@@ -74,6 +75,19 @@ public class PaymentController {
     //测试自定义的轮训策略--ribbon
     @GetMapping(value = "/payment/lb")
     public String getPaymentLB() {
+        return serverPort;
+    }
+
+
+    //OpenFeign超时控制测试
+    @GetMapping("/payment/feign/timeout")
+    public String paymentFeignTimeout() {
+        //线程控制暂停3秒钟
+        try {
+            TimeUnit.SECONDS.sleep(3);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
         return serverPort;
     }
 }

@@ -4,6 +4,7 @@ package com.neo.springcloud.config;/**
  * @Description : TODO
  */
 
+import org.springframework.cloud.client.loadbalancer.LoadBalanced;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.web.client.RestTemplate;
@@ -19,7 +20,7 @@ public class ApplicationContextConfig {
     //applicationContext.xml  <bean id="" class="">
 
     @Bean
-    //@LoadBalanced       //是restTemplate负载均衡，默认是轮训机制
+    @LoadBalanced       //是restTemplate负载均衡，默认是轮训机制
     public RestTemplate getRestTemplate() {
         return new RestTemplate();
     }
