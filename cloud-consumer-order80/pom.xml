@@ -25,6 +25,7 @@
         <!--</dependency>-->
 
         <!--Eureka注册中心:客户端-->
+        <!--Eureka自带Ribbon-->
         <dependency>
             <groupId>org.springframework.cloud</groupId>
             <artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>

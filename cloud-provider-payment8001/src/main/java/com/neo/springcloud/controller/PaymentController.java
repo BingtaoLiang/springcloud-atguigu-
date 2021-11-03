@@ -57,7 +57,7 @@ public class PaymentController {
     }
 
 
-    //服务发现，除了这里要加代码，还要在主启动类中加入@EnableDiscoveryClient注解
+    //服务发现，除了这里要加代码，还要在主启动类中加入@EnableDiscoveryClient注解  (测试zookeeper服务注册中心)
     @GetMapping(value = "/payment/discovery")
     public Object discovery() {
         List<String> services = discoveryClient.getServices();
@@ -69,5 +69,11 @@ public class PaymentController {
             log.info(instance.getInstanceId() + "\t" + instance.getHost() + "\t" + instance.getPort() + "\t" + instance.getUri());
         }
         return this.discoveryClient;
+    }
+
+    //测试自定义的轮训策略--ribbon
+    @GetMapping(value = "/payment/lb")
+    public String getPaymentLB() {
+        return serverPort;
     }
 }
