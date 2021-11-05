@@ -29,19 +29,19 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5089fcb5-3f1b-48c9-b037-1d351902bb6c" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/cloud-gateway-gateway9527/Gateway新一代网关.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cloud-gateway-gateway9527/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cloud-gateway-gateway9527/src/main/java/com/neo/springcloud/GatewayMain9527.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cloud-gateway-gateway9527/src/main/resources/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cloud-consumer-order80/src/main/java/com/neo/springcloud/config/ApplicationContextConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/cloud-consumer-order80/src/main/java/com/neo/springcloud/config/ApplicationContextConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cloud-consumer-order80/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/cloud-consumer-order80/src/main/resources/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cloud-consumer-order80/target/classes/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/cloud-consumer-order80/target/classes/application.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cloud-gateway-gateway9527/src/main/java/com/neo/springcloud/filter/MyLogGatewayFilter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cloud-gateway-gateway9527/src/test/java/Test1.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cloud-eureka-server7001/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/cloud-eureka-server7001/src/main/resources/application.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cloud-eureka-server7001/target/classes/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/cloud-eureka-server7001/target/classes/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cloud-provider-payment8001/src/main/java/com/neo/springcloud/controller/PaymentController.java" beforeDir="false" afterPath="$PROJECT_DIR$/cloud-provider-payment8001/src/main/java/com/neo/springcloud/controller/PaymentController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cloud-provider-payment8001/target/classes/com/neo/springcloud/controller/PaymentController.class" beforeDir="false" afterPath="$PROJECT_DIR$/cloud-provider-payment8001/target/classes/com/neo/springcloud/controller/PaymentController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/readme.md" beforeDir="false" afterPath="$PROJECT_DIR$/readme.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cloud-eureka-server7002/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/cloud-eureka-server7002/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cloud-eureka-server7002/target/classes/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/cloud-eureka-server7002/target/classes/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cloud-gateway-gateway9527/Gateway新一代网关.md" beforeDir="false" afterPath="$PROJECT_DIR$/cloud-gateway-gateway9527/Gateway新一代网关.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cloud-gateway-gateway9527/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/cloud-gateway-gateway9527/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cloud-gateway-gateway9527/target/classes/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/cloud-gateway-gateway9527/target/classes/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cloud-provider-payment8001/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/cloud-provider-payment8001/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cloud-provider-payment8001/target/classes/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/cloud-provider-payment8001/target/classes/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cloud-provider-payment8002/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/cloud-provider-payment8002/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cloud-provider-payment8002/target/classes/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/cloud-provider-payment8002/target/classes/application.yml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -124,7 +124,14 @@
       </set>
     </option>
   </component>
-  <component name="RunManager" selected="Spring Boot.OrderMain80">
+  <component name="RunManager" selected="Spring Boot.GatewayMain9527">
+    <configuration name="Test1" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Test1" />
+      <module name="cloud-gateway-gateway9527" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
       <option name="arquillianRunConfiguration">
         <value>
@@ -181,19 +188,6 @@
     <configuration name="OrderConsulMain80" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
       <module name="cloud-consumerconsul-order80" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.neo.springcloud.OrderConsulMain80" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="OrderHystrixMain80" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
-      <module name="cloud-consumer-feign-hystrix-order80" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.neo.springcloud.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="SPRING_BOOT_MAIN_CLASS" value="com.neo.springcloud.OrderHystrixMain80" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -269,21 +263,21 @@
       <item itemvalue="Spring Boot.PaymentMain8002" />
       <item itemvalue="Spring Boot.PaymentMain8004" />
       <item itemvalue="Spring Boot.PaymentMain8006" />
-      <item itemvalue="Spring Boot.OrderHystrixMain80" />
       <item itemvalue="Spring Boot.PaymentHystrixMain8001" />
       <item itemvalue="Spring Boot.PaymentMain8001" />
       <item itemvalue="Spring Boot.OrderConsulMain80" />
       <item itemvalue="Spring Boot.HystrixDashboardMain9001" />
       <item itemvalue="Spring Boot.OrderMain80" />
       <item itemvalue="Spring Boot.GatewayMain9527" />
+      <item itemvalue="Application.Test1" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Spring Boot.PaymentMain8001" />
         <item itemvalue="Spring Boot.GatewayMain9527" />
+        <item itemvalue="Spring Boot.PaymentMain8001" />
+        <item itemvalue="Application.Test1" />
         <item itemvalue="Spring Boot.PaymentHystrixMain8001" />
         <item itemvalue="Spring Boot.HystrixDashboardMain9001" />
-        <item itemvalue="Spring Boot.OrderHystrixMain80" />
       </list>
     </recent_temporary>
   </component>
@@ -302,7 +296,7 @@
       <workItem from="1635749411728" duration="126000" />
       <workItem from="1635749605518" duration="15076000" />
       <workItem from="1635816086651" duration="36623000" />
-      <workItem from="1635922754929" duration="40395000" />
+      <workItem from="1635922754929" duration="47678000" />
     </task>
     <servers />
   </component>
@@ -349,11 +343,11 @@
       <screen x="0" y="0" width="1600" height="860" />
     </state>
     <state x="407" y="61" width="1112" height="692" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1600.860/1600.0.1920.1080@0.0.1600.860" timestamp="1635749524601" />
-    <state x="2326" y="182" key="#com.intellij.ide.util.MemberChooser" timestamp="1635991981310">
+    <state x="2326" y="182" key="#com.intellij.ide.util.MemberChooser" timestamp="1636079942162">
       <screen x="1600" y="0" width="1920" height="1080" />
     </state>
     <state x="605" y="145" key="#com.intellij.ide.util.MemberChooser/0.0.1600.860/1600.0.1920.1080@0.0.1600.860" timestamp="1635729984127" />
-    <state x="2326" y="182" key="#com.intellij.ide.util.MemberChooser/0.0.1600.860/1600.0.1920.1080@1600.0.1920.1080" timestamp="1635991981310" />
+    <state x="2326" y="182" key="#com.intellij.ide.util.MemberChooser/0.0.1600.860/1600.0.1920.1080@1600.0.1920.1080" timestamp="1636079942162" />
     <state x="2309" y="157" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1635768359331">
       <screen x="1600" y="0" width="1920" height="1080" />
     </state>
@@ -362,46 +356,46 @@
       <screen x="0" y="0" width="1600" height="860" />
     </state>
     <state x="580" y="184" key="FileChooserDialogImpl/0.0.1600.860/1600.0.1920.1080@0.0.1600.860" timestamp="1635734072613" />
-    <state width="1513" height="383" key="GridCell.Tab.0.bottom" timestamp="1636032558743">
+    <state width="1559" height="383" key="GridCell.Tab.0.bottom" timestamp="1636080734063">
       <screen x="1600" y="0" width="1920" height="1080" />
     </state>
     <state width="1556" height="250" key="GridCell.Tab.0.bottom/0.0.1600.860/1600.0.1920.1080@0.0.1600.860" timestamp="1635754841108" />
-    <state width="1513" height="383" key="GridCell.Tab.0.bottom/0.0.1600.860/1600.0.1920.1080@1600.0.1920.1080" timestamp="1636032558743" />
-    <state width="1513" height="383" key="GridCell.Tab.0.center" timestamp="1636032558743">
+    <state width="1559" height="383" key="GridCell.Tab.0.bottom/0.0.1600.860/1600.0.1920.1080@1600.0.1920.1080" timestamp="1636080734063" />
+    <state width="1559" height="383" key="GridCell.Tab.0.center" timestamp="1636080734062">
       <screen x="1600" y="0" width="1920" height="1080" />
     </state>
     <state width="1556" height="250" key="GridCell.Tab.0.center/0.0.1600.860/1600.0.1920.1080@0.0.1600.860" timestamp="1635754841107" />
-    <state width="1513" height="383" key="GridCell.Tab.0.center/0.0.1600.860/1600.0.1920.1080@1600.0.1920.1080" timestamp="1636032558743" />
-    <state width="1513" height="383" key="GridCell.Tab.0.left" timestamp="1636032558743">
+    <state width="1559" height="383" key="GridCell.Tab.0.center/0.0.1600.860/1600.0.1920.1080@1600.0.1920.1080" timestamp="1636080734062" />
+    <state width="1559" height="383" key="GridCell.Tab.0.left" timestamp="1636080734062">
       <screen x="1600" y="0" width="1920" height="1080" />
     </state>
     <state width="1556" height="250" key="GridCell.Tab.0.left/0.0.1600.860/1600.0.1920.1080@0.0.1600.860" timestamp="1635754841107" />
-    <state width="1513" height="383" key="GridCell.Tab.0.left/0.0.1600.860/1600.0.1920.1080@1600.0.1920.1080" timestamp="1636032558742" />
-    <state width="1513" height="383" key="GridCell.Tab.0.right" timestamp="1636032558743">
+    <state width="1559" height="383" key="GridCell.Tab.0.left/0.0.1600.860/1600.0.1920.1080@1600.0.1920.1080" timestamp="1636080734062" />
+    <state width="1559" height="383" key="GridCell.Tab.0.right" timestamp="1636080734063">
       <screen x="1600" y="0" width="1920" height="1080" />
     </state>
     <state width="1556" height="250" key="GridCell.Tab.0.right/0.0.1600.860/1600.0.1920.1080@0.0.1600.860" timestamp="1635754841107" />
-    <state width="1513" height="383" key="GridCell.Tab.0.right/0.0.1600.860/1600.0.1920.1080@1600.0.1920.1080" timestamp="1636032558743" />
-    <state width="1513" height="383" key="GridCell.Tab.1.bottom" timestamp="1636032558743">
+    <state width="1559" height="383" key="GridCell.Tab.0.right/0.0.1600.860/1600.0.1920.1080@1600.0.1920.1080" timestamp="1636080734063" />
+    <state width="1559" height="383" key="GridCell.Tab.1.bottom" timestamp="1636080734063">
       <screen x="1600" y="0" width="1920" height="1080" />
     </state>
     <state width="1184" height="218" key="GridCell.Tab.1.bottom/0.0.1600.860/1600.0.1920.1080@0.0.1600.860" timestamp="1635753089066" />
-    <state width="1513" height="383" key="GridCell.Tab.1.bottom/0.0.1600.860/1600.0.1920.1080@1600.0.1920.1080" timestamp="1636032558743" />
-    <state width="1513" height="383" key="GridCell.Tab.1.center" timestamp="1636032558743">
+    <state width="1559" height="383" key="GridCell.Tab.1.bottom/0.0.1600.860/1600.0.1920.1080@1600.0.1920.1080" timestamp="1636080734063" />
+    <state width="1559" height="383" key="GridCell.Tab.1.center" timestamp="1636080734063">
       <screen x="1600" y="0" width="1920" height="1080" />
     </state>
     <state width="1184" height="218" key="GridCell.Tab.1.center/0.0.1600.860/1600.0.1920.1080@0.0.1600.860" timestamp="1635753089066" />
-    <state width="1513" height="383" key="GridCell.Tab.1.center/0.0.1600.860/1600.0.1920.1080@1600.0.1920.1080" timestamp="1636032558743" />
-    <state width="1513" height="383" key="GridCell.Tab.1.left" timestamp="1636032558743">
+    <state width="1559" height="383" key="GridCell.Tab.1.center/0.0.1600.860/1600.0.1920.1080@1600.0.1920.1080" timestamp="1636080734063" />
+    <state width="1559" height="383" key="GridCell.Tab.1.left" timestamp="1636080734063">
       <screen x="1600" y="0" width="1920" height="1080" />
     </state>
     <state width="1184" height="218" key="GridCell.Tab.1.left/0.0.1600.860/1600.0.1920.1080@0.0.1600.860" timestamp="1635753089066" />
-    <state width="1513" height="383" key="GridCell.Tab.1.left/0.0.1600.860/1600.0.1920.1080@1600.0.1920.1080" timestamp="1636032558743" />
-    <state width="1513" height="383" key="GridCell.Tab.1.right" timestamp="1636032558743">
+    <state width="1559" height="383" key="GridCell.Tab.1.left/0.0.1600.860/1600.0.1920.1080@1600.0.1920.1080" timestamp="1636080734063" />
+    <state width="1559" height="383" key="GridCell.Tab.1.right" timestamp="1636080734063">
       <screen x="1600" y="0" width="1920" height="1080" />
     </state>
     <state width="1184" height="218" key="GridCell.Tab.1.right/0.0.1600.860/1600.0.1920.1080@0.0.1600.860" timestamp="1635753089066" />
-    <state width="1513" height="383" key="GridCell.Tab.1.right/0.0.1600.860/1600.0.1920.1080@1600.0.1920.1080" timestamp="1636032558743" />
+    <state width="1559" height="383" key="GridCell.Tab.1.right/0.0.1600.860/1600.0.1920.1080@1600.0.1920.1080" timestamp="1636080734063" />
     <state width="1553" height="328" key="GridCell.Tab.2.bottom" timestamp="1635995843398">
       <screen x="1600" y="0" width="1920" height="1080" />
     </state>
@@ -449,10 +443,10 @@
       <screen x="1600" y="0" width="1920" height="1080" />
     </state>
     <state x="2216" y="245" key="run.anything.popup/0.0.1600.860/1600.0.1920.1080@1600.0.1920.1080" timestamp="1636026944546" />
-    <state x="2223" y="235" width="672" height="678" key="search.everywhere.popup" timestamp="1636031923888">
+    <state x="2223" y="235" width="672" height="678" key="search.everywhere.popup" timestamp="1636079912995">
       <screen x="1600" y="0" width="1920" height="1080" />
     </state>
-    <state x="2223" y="235" width="672" height="678" key="search.everywhere.popup/0.0.1600.860/1600.0.1920.1080@1600.0.1920.1080" timestamp="1636031923888" />
+    <state x="2223" y="235" width="672" height="678" key="search.everywhere.popup/0.0.1600.860/1600.0.1920.1080@1600.0.1920.1080" timestamp="1636079912995" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

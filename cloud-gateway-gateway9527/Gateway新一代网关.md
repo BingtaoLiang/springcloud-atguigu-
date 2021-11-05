@@ -73,3 +73,74 @@
    1. 在配置文件yml中配置 具体见第4节
    2. 代码中注入RouteLocator的Bean 相较于yml配置方式太繁琐，推荐使用yml配置的方式，直观简单
    
+ ## 4.2 通过微服务名实现动态路由
+   默认情况下gateway会根据注册中心注册的服务列表，以注册中心上微服务名为路径创建动态路由进行转发，从而实现动态路由的功能
+   ```yaml
+      #主要是以下配置
+     spring: 
+       cloud:
+          gateway:
+            discovery:
+              locator:
+                enabled: true   #开启从注册中心动态创建路由的功能，利用微服务明进行动态路由      
+            routes:
+              - id: payment_routh #payment_route  #路由的ID，没有固定的规则但要求唯一，建议配合服务名
+              #          uri: http://localhost:8001    #匹配后提供服务的路由地址
+                uri: lb://cloud-payment-service #匹配后提供服务的路由地址(动态路由)
+
+   ```
+   
+# 5. Gateway常用的Predicates
+ 常用的Route Predicate 
+ 
+     1. Loaded RoutePredicateFactory [After]
+        要获得对应格式的时间串，利用如下代码获得：
+        public static void main(String[] args) {
+                ZonedDateTime zonedDateTime = ZonedDateTime.now();
+                System.out.println(zonedDateTime);
+                //2021-11-05T09:35:54.329+08:00[Asia/Shanghai]
+        }
+        2021-11-05T09:35:54.329+08:00[Asia/Shanghai]
+     2. Loaded RoutePredicateFactory [Before]
+            Before和Between的用法和After类似
+     3. Loaded RoutePredicateFactory [Between]
+            - Between=2021-11-06T09:35:54.329+08:00[Asia/Shanghai],2021-11-07T09:35:54.329+08:00[Asia/Shanghai] #在这两个时间之间的请求才生效
+     4. Loaded RoutePredicateFactory [Cookie]
+            Cookie Route Predicate 需要两个参数，一个是Cookie name,一个是正则表达式
+            路由规则会通过获取对应的Cookie name值和正则表达式去匹配，如果匹配上就会执行路由，没有匹配上就不执行
+            在cmd窗口执行`curl http://localhost:9527/payment/get/1`因为没有带上yml文件中配置的cookie，所以会请求失败
+            如果执行`curl http://localhost:9527/payment/get/1 --cookie "username=lbt"`就会请求成功
+     5. Loaded RoutePredicateFactory [Header]
+            两个参数：一个是属性名称和一个正则表达式，这个属性值和正则表达式匹配则执行 
+             curl http://localhost:9527/payment/get/1 -H "X-Request-Id:123"会执行成功
+     6. Loaded RoutePredicateFactory [Host]
+            Host Route Predicate 接收一组参数，一组匹配的域名列表，这个模板是一个ant分割的模板，用.号作为分割符，它通过参数中的主机地址作为匹配规则
+     7. Loaded RoutePredicateFactory [Method]
+            -Method=GET
+     8. Loaded RoutePredicateFactory [Path]
+     9. Loaded RoutePredicateFactory [Query]]
+            -Query=username, \d+ #要有参数名username并且值还要是整数才能路由
+     10. Loaded RoutePredicateFactory [ReadBodyPredicateFactory]
+     11. Loaded RoutePredicateFactory [RemoteAddr]
+      
+ 这些内置的Route Predicate都与HTTP请求的不同属性匹配，多个Route Predicate工厂可以进行组合。
+ 
+ # 6. Filter
+    路由过滤器可用于修改进入的HTTP请求和返回的HTTP相应，路由过滤器只能指定路由进行使用。
+    Spring Cloud Gateway内置了多种路由过滤器，他们都由GatewayFilter的工厂类来产生
+    
+  生命周期:
+   1. pre
+   2. post
+  种类：
+   1. GatewayFilter  31种
+   2. GlobalFilter   10余种
+   
+   **自定义过滤器(使用更多一些)**
+   1. 两个主要接口介绍： implemnts GlobalFilter,Ordered
+   2. 能干嘛，在所有的微服务前边挡着，可以做全局日志记录，统一网关鉴权等
+   3. 代码见`MyLogGatewayFilter.class`
+   4. 测试：
+      正确：http://localhost:9527/payment/lb?uname=zs
+      错误：http://localhost:9527/payment/lb
+   
