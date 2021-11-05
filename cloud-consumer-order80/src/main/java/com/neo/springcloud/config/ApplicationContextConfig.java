@@ -20,7 +20,7 @@ public class ApplicationContextConfig {
     //applicationContext.xml  <bean id="" class="">
 
     @Bean
-    @LoadBalanced       //是restTemplate负载均衡，默认是轮训机制
+    @LoadBalanced       //是restTemplate负载均衡，默认是轮询机制
     public RestTemplate getRestTemplate() {
         return new RestTemplate();
     }
