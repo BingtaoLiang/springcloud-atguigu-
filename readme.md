@@ -38,4 +38,7 @@ AP wihtout C：要高可用并允许分区，则需放弃一致性。一旦分�
     16. cloud-config-center3344 -- Config配置服务中心
     17. cloud-config-center3355 -- Config配置服务客户端
     18. cloud-config-center3366 -- Config配置服务客户端
+    19. cloud-stream-rabbitmq-provider8801,作为生产者进行发消息模块
+    20. cloud-stream-rabbitmq-consumer8802,作为消息接收模块
+    21. cloud-stream-rabbitmq-consumer8803，作为消息接收模块
     
