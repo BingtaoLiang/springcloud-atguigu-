@@ -35,4 +35,7 @@ AP wihtout C：要高可用并允许分区，则需放弃一致性。一旦分�
     13. cloud-consumer-feign-hystrix-order80 --服务调用方使用hystrix进行服务降级（一般服务降级加在客户端较多）
     14. cloud-consumer-hystrix-dashboard9001 --hystrix dashboard 图形化的服务监控
     15. cloud-gateway-gateway9527  --Gateway网关微服务
+    16. cloud-config-center3344 -- Config配置服务中心
+    17. cloud-config-center3355 -- Config配置服务客户端
+    18. cloud-config-center3366 -- Config配置服务客户端
     

@@ -1,3 +1,6 @@
 E:\code\SpringCloud\cloud-consumer-order80\src\main\java\com\neo\springcloud\controller\OrderController.java
+E:\code\SpringCloud\cloud-consumer-order80\src\main\java\com\neo\springcloud\lb\MyLB.java
 E:\code\SpringCloud\cloud-consumer-order80\src\main\java\com\neo\springcloud\OrderMain80.java
 E:\code\SpringCloud\cloud-consumer-order80\src\main\java\com\neo\springcloud\config\ApplicationContextConfig.java
+E:\code\SpringCloud\cloud-consumer-order80\src\main\java\com\neo\springcloud\lb\LoadBalancer.java
+E:\code\SpringCloud\cloud-consumer-order80\src\main\java\com\neo\myrule\MySelfRule.java
