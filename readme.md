@@ -41,4 +41,7 @@ AP wihtout C：要高可用并允许分区，则需放弃一致性。一旦分�
     19. cloud-stream-rabbitmq-provider8801,作为生产者进行发消息模块
     20. cloud-stream-rabbitmq-consumer8802,作为消息接收模块
     21. cloud-stream-rabbitmq-consumer8803，作为消息接收模块
+    22. cloudalibaba-provider-payment9001,SpringCloud Alibaba Nacos注册中心服务提供者，Nacos不像Eureka，不用写类似7001的注册中心了，Nacos服务启动后，直接访问8848Nacos页面
+    23. cloudalibaba-provider-payment9002,SpringCloud Alibaba Nacos注册中心服务提供者
+    24. cloudalibaba-consumer-nacos-order83，SpringCloud Alibaba Nacos注册中心服务消费者
     
