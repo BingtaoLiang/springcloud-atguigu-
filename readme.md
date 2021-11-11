@@ -30,7 +30,7 @@ AP wihtout C：要高可用并允许分区，则需放弃一致性。一旦分�
     8. cloud-provider-payment8002  --使用Eureka注册中心的服务提供者
     9. cloud-provider-payment8004  --使用Zookeeper注册中心的服务提供者
     10. cloud-providerconsul-payment8006  --使用Consul注册中心的服务提供者
-    11. cloud-consumer-feign-order  --使用OpenFeign进行服务调用
+    11. cloud-consumer-feign-order80  --使用OpenFeign进行服务调用
     12. cloud-provider-hystrix-payment8001 --服务提供方8001使用hystrix进行服务降级
     13. cloud-consumer-feign-hystrix-order80 --服务调用方使用hystrix进行服务降级（一般服务降级加在客户端较多）
     14. cloud-consumer-hystrix-dashboard9001 --hystrix dashboard 图形化的服务监控
@@ -38,10 +38,14 @@ AP wihtout C：要高可用并允许分区，则需放弃一致性。一旦分�
     16. cloud-config-center3344 -- Config配置服务中心
     17. cloud-config-center3355 -- Config配置服务客户端
     18. cloud-config-center3366 -- Config配置服务客户端
-    19. cloud-stream-rabbitmq-provider8801,作为生产者进行发消息模块
-    20. cloud-stream-rabbitmq-consumer8802,作为消息接收模块
-    21. cloud-stream-rabbitmq-consumer8803，作为消息接收模块
-    22. cloudalibaba-provider-payment9001,SpringCloud Alibaba Nacos注册中心服务提供者，Nacos不像Eureka，不用写类似7001的注册中心了，Nacos服务启动后，直接访问8848Nacos页面
-    23. cloudalibaba-provider-payment9002,SpringCloud Alibaba Nacos注册中心服务提供者
-    24. cloudalibaba-consumer-nacos-order83，SpringCloud Alibaba Nacos注册中心服务消费者
+    19. springcoud-config --Config配置服务中心所需文件
+    20. cloud-stream-rabbitmq-provider8801,作为生产者进行发消息模块
+    21. cloud-stream-rabbitmq-consumer8802,作为消息接收模块
+    22. cloud-stream-rabbitmq-consumer8803，作为消息接收模块
+    23. cloudalibaba-provider-payment9001,SpringCloud Alibaba Nacos注册中心服务提供者，Nacos不像Eureka，不用写类似7001的注册中心了，Nacos服务启动后，直接访问8848Nacos页面
+    24. cloudalibaba-provider-payment9002,SpringCloud Alibaba Nacos注册中心服务提供者
+    25. cloudalibaba-consumer-nacos-order83，SpringCloud Alibaba Nacos注册中心服务消费者
+    26. cloudalibaba-config-nacos-client3377 SpringCloud Alibaba Nacos做配置管理
+    27. cloudalibaba-sentinel-service8401  SpringCloud Sentinel服务熔断降流
+    
     
