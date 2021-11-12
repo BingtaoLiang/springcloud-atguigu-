@@ -47,5 +47,24 @@ AP wihtout C：要高可用并允许分区，则需放弃一致性。一旦分�
     25. cloudalibaba-consumer-nacos-order83，SpringCloud Alibaba Nacos注册中心服务消费者
     26. cloudalibaba-config-nacos-client3377 SpringCloud Alibaba Nacos做配置管理
     27. cloudalibaba-sentinel-service8401  SpringCloud Sentinel服务熔断降流
+    28. cloudalibaba-provider-payment9003 Sentinel整合ribbon和feign服务提供者
+    29. cloudalibaba-provider-payment9004 Sentinel整合ribbon和feign服务提供者
+    30. cloudalibaba-consumer-nacos-order84 Sentinel整合ribbon和feign服务调用者
     
+    
+    
+参考网址
+
+      1. SpringCloud官方手册：https://cloud.spring.io/spring-cloud-static/Hoxton.SR1/reference/htmlsingle/ 
+      2. SpringCloud Alibaba官方手册 :https://spring-cloud-alibaba-group.github.io/github-pages/hoxton/en-us/index.html#_introduction
+      
+      
+      Seata官网：http://seata.io/zh-cn/
+      
+ 
+    
+    
+    
+    csdn笔记：https://blog.csdn.net/hancoder/article/details/109063671
+    尚硅谷github地址：https://github.com/zzyybs/atguigu_spirngcloud2020
     

@@ -1,5 +1,0 @@
-com\neo\springcloud\service\PaymentService.class
-com\neo\springcloud\config\ApplicationContextConfig.class
-com\neo\springcloud\controller\CircleBreakerController.class
-com\neo\springcloud\OrderNacosMain84.class
-com\neo\springcloud\service\PaymentFallbackService.class

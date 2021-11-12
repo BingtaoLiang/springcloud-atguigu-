@@ -1,0 +1,19 @@
+
+H
+java:S1135"2Complete the task associated to this TODO comment.(Üð£Å
+Q	java:S125!"<This block of commented-out lines of code should be removed.(¢º‰–
+t
+java:S2142)"^Either re-interrupt this method or rethrow the "InterruptedException" that can be caught here.(¿ÁÁÍ
+V	java:S125,"<This block of commented-out lines of code should be removed.(”ÎÄýÿÿÿÿ
+R
+java:S18544"7Remove this useless assignment to local variable "age".(Ð­‘óþÿÿÿÿ
+C
+java:S14814"(Remove this unused "age" local variable.(Ð­‘óþÿÿÿÿ
+V	java:S125<"<This block of commented-out lines of code should be removed.(ù‘¶‰üÿÿÿÿ
+h	java:S100@"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(·×¹¿øÿÿÿÿ
+O
+java:S3400A"9Remove this method and declare a constant for this value.(üå”Ý
+Y
+java:S1172@">Remove these unused method parameters "p1", "p2", "exception".(·×¹¿øÿÿÿÿ
+^
+java:S35184"CMake sure this expression can't be zero before doing this division.(Ð­‘óþÿÿÿÿ
